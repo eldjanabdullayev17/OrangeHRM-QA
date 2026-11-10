@@ -91,6 +91,21 @@ The latest recorded execution produced the following results:
 
 The two failing test cases are related to employee editing and deletion in the PIM module. These failures require further investigation to determine whether they are caused by the application or the automation implementation. They are not classified as confirmed application defects.
 
+### Failed Test Cases – Investigation
+
+Two automated test cases were marked as Failed during test execution:
+
+| Test Case | Module | Status | Observed Issue |
+|---|---|---|---|
+| Edit Employee | PIM | Failed | TimeoutException occurred while locating the employee search field during page navigation. |
+| Delete Employee | PIM | Failed | The employee was not reliably verified as removed from the employee list after the deletion operation. |
+
+**Investigation Notes:**
+
+- The Edit Employee test encountered a page navigation and element identification issue.
+- The Delete Employee test required more reliable employee-specific selection and post-deletion verification.
+- These failures were treated as automation-related issues requiring further investigation. No confirmed application defects were established based on these failures alone.
+
 ## Test Reports & Documentation
 
 The project includes the following testing documents:
